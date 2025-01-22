@@ -1,0 +1,18 @@
+FUNCTION is_full(top)
+    IF top == MAX_SIZE - 1 THEN	
+    	RETURN True
+    ELSE
+    	RETURN False
+    ENDIF
+ENDFUNCTION 
+
+
+FUNCTION push(stack, top, data)
+    IF is_full(top) == True THEN
+        PRINT("Stack is full")
+    ELSE
+    	top = top + 1
+        stack[top] = data
+    ENDIF
+    RETURN top
+ENDFUNCTION 
